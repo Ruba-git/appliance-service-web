@@ -1,0 +1,108 @@
+:root {
+  --bg: #f6f8ff;
+  --card: #ffffff;
+  --primary: #2a63ff;
+  --primary-dark: #1348d8;
+  --text: #1a1d33;
+  --muted: #5a6382;
+  --accent: #e9efff;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text);
+  background: linear-gradient(160deg, #eef3ff, #f8fbff);
+}
+
+.auth-page {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+}
+
+.auth-card, .ai-panel, .pricing-card, .booking-card, .hero {
+  background: var(--card);
+  border-radius: 16px;
+  box-shadow: 0 10px 24px rgba(28, 43, 100, 0.08);
+}
+
+.auth-card {
+  width: min(430px, 100%);
+  padding: 28px;
+}
+
+.subtitle { color: var(--muted); margin-top: -8px; }
+.auth-form { display: grid; gap: 10px; margin-top: 12px; }
+label { font-weight: 600; font-size: 0.95rem; }
+input, textarea {
+  padding: 10px 12px;
+  border: 1px solid #d7def8;
+  border-radius: 10px;
+  font-size: 1rem;
+  width: 100%;
+}
+
+.btn {
+  border: none;
+  border-radius: 10px;
+  padding: 10px 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn.primary { background: var(--primary); color: white; }
+.btn.primary:hover { background: var(--primary-dark); }
+.btn.google { background: #fff; border: 1px solid #d7def8; width: 100%; margin-top: 12px; }
+.btn.secondary { background: var(--accent); color: var(--text); }
+.switch-link { text-align: center; margin-top: 14px; }
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  background: white;
+  border-bottom: 1px solid #e7ebfd;
+}
+.logout { text-decoration: none; color: var(--primary); font-weight: 600; }
+
+.dashboard, .service-page {
+  width: min(1100px, 95%);
+  margin: 24px auto;
+  display: grid;
+  gap: 20px;
+}
+
+.hero { padding: 20px; }
+.appliances {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 14px;
+}
+.appliance-btn {
+  padding: 18px;
+  background: #fff;
+  border-radius: 14px;
+  border: 1px solid #d7def8;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.appliance-btn:hover { border-color: var(--primary); color: var(--primary); }
+
+.ai-panel, .pricing-card, .booking-card { padding: 18px; }
+.controls { display: flex; gap: 10px; margin-top: 10px; flex-wrap: wrap; }
+.ai-response {
+  margin-top: 12px;
+  background: var(--bg);
+  padding: 10px;
+  border-radius: 10px;
+  min-height: 44px;
+}
+
+#pricing-list { padding-left: 20px; line-height: 1.8; }
+#booking-message { font-weight: 700; color: #0d7d45; }
