@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Appliance Care | Booking</title>
+  <title>ServicePro AI | Booking</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -13,12 +13,13 @@
   </header>
 
   <main class="service-page">
-    <section class="pricing-card">
-      <h2>Available Services (INR ₹)</h2>
+    <section class="pricing-card premium-card">
+      <h2 id="appliance-name">Available Services (INR ₹)</h2>
+      <img id="appliance-image" class="service-logo" src="assets/ac.svg" alt="Appliance logo" />
       <ul id="pricing-list"></ul>
     </section>
 
-    <section class="booking-card">
+    <section class="booking-card premium-card">
       <h2>Book Your Service</h2>
       <form id="booking-form">
         <label>Customer Name</label>
@@ -32,6 +33,13 @@
 
         <label>Issue Description</label>
         <textarea id="booking-issue" required placeholder="Describe the issue"></textarea>
+
+        <label>Payment Method</label>
+        <select required>
+          <option value="">Select payment</option>
+          <option>Razorpay (Online)</option>
+          <option>Pay after service</option>
+        </select>
 
         <div class="controls">
           <button type="button" id="voice-booking" class="btn secondary">🎤 Voice Input</button>

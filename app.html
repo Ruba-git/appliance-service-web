@@ -3,31 +3,45 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Appliance Care | Services</title>
+  <title>ServicePro AI | Dashboard</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header class="topbar">
-    <h1>Appliance Care</h1>
+    <h1>ServicePro AI</h1>
     <a class="logout" href="login.html">Logout</a>
   </header>
 
   <main class="dashboard">
-    <section class="hero">
-      <h2>Book trusted home appliance services</h2>
-      <p>Urban-company style booking with AI suggestions and voice control.</p>
+    <section class="hero premium-card">
+      <h2>Urban-company style appliance service booking</h2>
+      <p>Book AC, Washing Machine, and Refrigerator service with AI voice control, smart intent parsing, and quick Razorpay checkout support.</p>
+      <div class="chip-row">
+        <span>Google Auth + JWT Email Login</span>
+        <span>Whisper + GPT-4o-mini Voice AI</span>
+        <span>Pricing in ₹ INR</span>
+      </div>
     </section>
 
     <section class="appliances">
-      <button class="appliance-btn" data-appliance="ac">AC Service</button>
-      <button class="appliance-btn" data-appliance="washing-machine">Washing Machine Service</button>
-      <button class="appliance-btn" data-appliance="refrigerator">Refrigerator Service</button>
+      <button class="appliance-btn" data-appliance="ac">
+        <img src="assets/ac.svg" alt="AC logo" />
+        <span>AC Service</span>
+      </button>
+      <button class="appliance-btn" data-appliance="washing-machine">
+        <img src="assets/washing-machine.svg" alt="Washing Machine logo" />
+        <span>Washing Machine Service</span>
+      </button>
+      <button class="appliance-btn" data-appliance="refrigerator">
+        <img src="assets/refrigerator.svg" alt="Refrigerator logo" />
+        <span>Refrigerator Service</span>
+      </button>
     </section>
 
-    <section class="ai-panel">
-      <h3>AI Control Assistant</h3>
-      <p>Describe your problem and get a smart recommendation.</p>
-      <textarea id="issue-input" rows="4" placeholder="Example: My AC is cooling slowly and making noise"></textarea>
+    <section class="ai-panel premium-card">
+      <h3>AI Voice Booking Assistant</h3>
+      <p>Speak naturally (Hindi/English mix works) and AI will detect appliance + service intent for faster booking.</p>
+      <textarea id="issue-input" rows="4" placeholder="Example: Fridge cooling kam ho gaya hai, kal service chahiye"></textarea>
       <div class="controls">
         <button id="voice-issue" class="btn secondary">🎤 Voice Input</button>
         <button id="get-advice" class="btn primary">Get AI Recommendation</button>
