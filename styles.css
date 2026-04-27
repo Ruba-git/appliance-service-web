@@ -1,6 +1,6 @@
 :root {
-  --bg: #f6f8ff;
-  --card: #ffffff;
+  --bg: #f4f7ff;
+  --card: rgba(255, 255, 255, 0.9);
   --primary: #2a63ff;
   --primary-dark: #1348d8;
   --text: #1a1d33;
@@ -11,9 +11,12 @@
 * { box-sizing: border-box; }
 body {
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Inter, Segoe UI, Arial, Helvetica, sans-serif;
   color: var(--text);
-  background: linear-gradient(160deg, #eef3ff, #f8fbff);
+  background:
+    radial-gradient(circle at top right, #d8e6ff 0%, transparent 45%),
+    radial-gradient(circle at bottom left, #e7fff4 0%, transparent 42%),
+    linear-gradient(165deg, #eef2ff, #f9fbff);
 }
 
 .auth-page {
@@ -25,32 +28,73 @@ body {
 
 .auth-card, .ai-panel, .pricing-card, .booking-card, .hero {
   background: var(--card);
-  border-radius: 16px;
-  box-shadow: 0 10px 24px rgba(28, 43, 100, 0.08);
+  border-radius: 20px;
+  box-shadow: 0 18px 36px rgba(28, 43, 100, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+}
+
+.premium-card {
+  position: relative;
+  overflow: hidden;
+}
+.premium-card::after {
+  content: '';
+  position: absolute;
+  width: 160px;
+  height: 160px;
+  right: -70px;
+  top: -70px;
+  background: rgba(42, 99, 255, 0.12);
+  border-radius: 50%;
+  pointer-events: none;
 }
 
 .auth-card {
-  width: min(430px, 100%);
+  width: min(460px, 100%);
   padding: 28px;
+}
+
+.eyebrow {
+  margin: 0;
+  font-weight: 700;
+  color: var(--primary);
+  font-size: 0.9rem;
 }
 
 .subtitle { color: var(--muted); margin-top: -8px; }
 .auth-form { display: grid; gap: 10px; margin-top: 12px; }
 label { font-weight: 600; font-size: 0.95rem; }
-input, textarea {
-  padding: 10px 12px;
+input, textarea, select {
+  padding: 11px 12px;
   border: 1px solid #d7def8;
-  border-radius: 10px;
+  border-radius: 12px;
   font-size: 1rem;
   width: 100%;
+  background: #fff;
+}
+
+.logo-row {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 10px 0 8px;
+}
+.logo-row img {
+  width: 54px;
+  height: 54px;
+  padding: 8px;
+  border-radius: 12px;
+  background: #fff;
+  border: 1px solid #dce5ff;
 }
 
 .btn {
   border: none;
-  border-radius: 10px;
-  padding: 10px 12px;
+  border-radius: 12px;
+  padding: 11px 14px;
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 700;
   cursor: pointer;
 }
 
@@ -65,7 +109,7 @@ input, textarea {
   justify-content: space-between;
   align-items: center;
   padding: 12px 20px;
-  background: white;
+  background: rgba(255, 255, 255, 0.9);
   border-bottom: 1px solid #e7ebfd;
 }
 .logout { text-decoration: none; color: var(--primary); font-weight: 600; }
@@ -78,6 +122,20 @@ input, textarea {
 }
 
 .hero { padding: 20px; }
+.chip-row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.chip-row span {
+  background: #fff;
+  border: 1px solid #d7def8;
+  border-radius: 999px;
+  padding: 7px 12px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
 .appliances {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -86,13 +144,24 @@ input, textarea {
 .appliance-btn {
   padding: 18px;
   background: #fff;
-  border-radius: 14px;
+  border-radius: 16px;
   border: 1px solid #d7def8;
   font-weight: 700;
   font-size: 1rem;
   cursor: pointer;
+  display: grid;
+  justify-items: center;
+  gap: 10px;
 }
-.appliance-btn:hover { border-color: var(--primary); color: var(--primary); }
+.appliance-btn img {
+  width: 72px;
+  height: 72px;
+}
+.appliance-btn:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+  transform: translateY(-1px);
+}
 
 .ai-panel, .pricing-card, .booking-card { padding: 18px; }
 .controls { display: flex; gap: 10px; margin-top: 10px; flex-wrap: wrap; }
@@ -102,6 +171,15 @@ input, textarea {
   padding: 10px;
   border-radius: 10px;
   min-height: 44px;
+}
+
+.service-logo {
+  width: 82px;
+  height: 82px;
+  padding: 8px;
+  border-radius: 14px;
+  border: 1px solid #dce5ff;
+  background: #fff;
 }
 
 #pricing-list { padding-left: 20px; line-height: 1.8; }

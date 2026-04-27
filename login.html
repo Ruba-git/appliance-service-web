@@ -3,14 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Appliance Care | Login</title>
+  <title>ServicePro AI | Login</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <main class="auth-page">
-    <section class="auth-card">
-      <h1>Appliance Care</h1>
-      <p class="subtitle">Login to book AC, Refrigerator, and Washing Machine services.</p>
+    <section class="auth-card premium-card">
+      <p class="eyebrow">Premium Home Services</p>
+      <h1>Welcome back 👋</h1>
+      <p class="subtitle">Login to book AC, Refrigerator, and Washing Machine services across India.</p>
+
+      <div class="logo-row">
+        <img src="assets/ac.svg" alt="AC" />
+        <img src="assets/refrigerator.svg" alt="Refrigerator" />
+        <img src="assets/washing-machine.svg" alt="Washing Machine" />
+      </div>
 
       <form class="auth-form" id="login-form">
         <label>Email</label>
@@ -19,11 +26,10 @@
         <label>Password</label>
         <input type="password" placeholder="••••••••" required />
 
-        <button type="submit" class="btn primary">Login with Email</button>
+        <button type="submit" class="btn primary">Sign with Email</button>
       </form>
 
       <button class="btn google" id="google-login">Sign with Google</button>
-
       <p class="switch-link">New user? <a href="signup.html">Create account</a></p>
     </section>
   </main>
