@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Appliance Care | Services</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <h1>Appliance Care</h1>
+    <a class="logout" href="login.html">Logout</a>
+  </header>
+
+  <main class="dashboard">
+    <section class="hero">
+      <h2>Book trusted home appliance services</h2>
+      <p>Urban-company style booking with AI suggestions and voice control.</p>
+    </section>
+
+    <section class="appliances">
+      <button class="appliance-btn" data-appliance="ac">AC Service</button>
+      <button class="appliance-btn" data-appliance="washing-machine">Washing Machine Service</button>
+      <button class="appliance-btn" data-appliance="refrigerator">Refrigerator Service</button>
+    </section>
+
+    <section class="ai-panel">
+      <h3>AI Control Assistant</h3>
+      <p>Describe your problem and get a smart recommendation.</p>
+      <textarea id="issue-input" rows="4" placeholder="Example: My AC is cooling slowly and making noise"></textarea>
+      <div class="controls">
+        <button id="voice-issue" class="btn secondary">🎤 Voice Input</button>
+        <button id="get-advice" class="btn primary">Get AI Recommendation</button>
+      </div>
+      <div id="ai-response" class="ai-response"></div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

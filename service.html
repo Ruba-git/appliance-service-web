@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Appliance Care | Booking</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <h1 id="service-title">Service Booking</h1>
+    <a class="logout" href="app.html">Back</a>
+  </header>
+
+  <main class="service-page">
+    <section class="pricing-card">
+      <h2>Available Services (INR ₹)</h2>
+      <ul id="pricing-list"></ul>
+    </section>
+
+    <section class="booking-card">
+      <h2>Book Your Service</h2>
+      <form id="booking-form">
+        <label>Customer Name</label>
+        <input type="text" required placeholder="Enter your name" />
+
+        <label>Mobile Number</label>
+        <input type="tel" required placeholder="10-digit number" />
+
+        <label>Address</label>
+        <textarea required placeholder="Enter complete service address"></textarea>
+
+        <label>Issue Description</label>
+        <textarea id="booking-issue" required placeholder="Describe the issue"></textarea>
+
+        <div class="controls">
+          <button type="button" id="voice-booking" class="btn secondary">🎤 Voice Input</button>
+          <button type="submit" class="btn primary">Confirm Booking</button>
+        </div>
+      </form>
+      <p id="booking-message"></p>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
